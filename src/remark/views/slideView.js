@@ -303,7 +303,7 @@ function highlightBlockLines (block, lines) {
 function highlightBlockSpans (block, highlightSpans) {
   var pattern;
   if (highlightSpans === true) {
-    pattern = /([^`])`([^`]+?)`/g;
+    pattern = /(^|[^`])`([^`]+?)`/g;
   } else if (highlightSpans instanceof RegExp) {
     if (! highlightSpans.global) {
       throw new Error('The regular expression in `highlightSpans` must have flag /g');
